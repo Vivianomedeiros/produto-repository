@@ -31,6 +31,12 @@ export class ProdutosComponent implements OnInit {
     // this.produtoAlterar = this.produtoLimpo;
   }
 
+
+  public formataData(dataSql: string):string{
+    let dataString:string = dataSql.substring(8,10) + "/" + dataSql.substring(5,7) + "/" + dataSql.substring(0,4);
+    return dataString;
+  }
+
   onSubmit(){
     console.log(this.produto);
     this.salvar();
